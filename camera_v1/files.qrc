@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/db">
+        <file>hierog.db</file>
+        <file>fau-logo-techfak.jpg</file>
+    </qresource>
+</RCC>
