@@ -69,17 +69,16 @@ Information inputted on the Edit page are sent to the sql database on the free o
 	https://cp1.awardspace.net/beta/login/?next=file-manager&notice=login
 
 Login details:
-Client ID: 2896427	
-pw: Awardspace1!
+- Client ID: 2896427	
+- pw: Awardspace1!
 
-Name, category and date are sent to the sql database, while images are stored in the File Manager folder named "fau5.atwebpages.com" on the web-host page.
+In both camera_versions, Name, category and date are sent to the sql database, while images are stored in the File Manager folder named "fau5.atwebpages.com" on the web-host page.
 
 SQL DB: https://cp1.awardspace.net/beta/database-manager/#mysql-databases
 File Manager: https://cp1.awardspace.net/beta/file-manager/
 
 Images are stored with the information given about them, so in the web-host folder “Images”, an image would be named as: 
-	'star_Celestial bodies_17_06_2019.jpg '
-
+	'star_Celestial bodies_17_06_2019.jpg'
 Where 
 -	Name: star
 -	Category: Celestial bodies
