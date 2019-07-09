@@ -118,17 +118,13 @@ opencv_android: https://sourceforge.net/projects/opencvlibrary/files/opencv-andr
 Example:
 https://www.youtube.com/watch?v=2Pboq2LFoaI
 
-On QT: 
-#Just include this in .pro file
+After opencv installation, to set up for QT: 
+Just include the following in the .pro file (check the camera_frontend.pro in camera_v1)
 
 -	For Desktop application
-#...
-
 INCLUDEPATH += /usr/local/include/
 LIBS += `pkg-config --libs opencv`
-#...
+
 
 -	For Android app:
-#...
 include(../../QtProject/shared/opencv_android.pri)
-#...
