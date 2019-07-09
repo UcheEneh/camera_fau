@@ -56,6 +56,14 @@ Item
         // fillMode: Image.PreserveAspectFit
         // smooth: true
         // visible: false
+        
+        Component.onCompleted:  {
+            selection = selectionComponent.createObject(parent,
+                                                        {"x": parent.width / 4,
+                                                         "y": parent.height / 4,
+                                                         "width": parent.width / 4,
+                                                         "height": parent.width / 4})
+        }
 
         MouseArea {
             anchors.fill: parent
