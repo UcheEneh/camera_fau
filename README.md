@@ -31,34 +31,31 @@ Openssl is important for sending the image and information to the online web hos
   -	https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
 
   Note: using vim: https://www.cyberciti.biz/faq/linux-unix-vim-save-and-quit-command/
-
-  ANACONDA OpenSsl Location: /root/anaconda3/bin
-
+  
 
 **************************************************************************************************************************
-                                                            APPS 
+                                                 APPS 
 **************************************************************************************************************************
+a.	camera_v1: created using Qt Widgets
+b.	camera_v2: created using QML
 
-a.	camera_v1:
 After setting up QT and android deployment on linux, open camera_frontend.pro
-o	Build and Run on desktop
-o	Deploy on phone:
-	Method 1: Deploy through debug on the qt creator software
-	Method 2: Deploy through installing the “android-deploy-debug.apk” file in the build folder
+-	Build and Run on desktop
+-	Deploy on phone:
+	- Method 1: Deploy through debug on the qt creator software
+	- Method 2: Deploy through installing the “android-deploy-debug.apk” file in the build folder
 
-
-b.	camera_v2:
-Created using QML
-Run on desktop
+Structure:
 •	Take picture
 •	Crop picture
-•	Open edit page
+•	Open edit page for the information about the picture
 	
 Deploy to Phone
 
 1.	Using QT IDE:
-2.	Using apk: select Release and build the program, then go to the build folder e.g.
+2.	Using apk: select Release and build the program, then go to the build folder 
 
+e.g.
 root/build-simplecamera_vMine-Android_for_armeabi_v7a_GCC_4_9_Qt_5_11_2_for_Android_ARMv7-Release/android-build/build/outputs/apk/android-build-debug.apk
 
 The apk file can be copied to the phone and installed directly
@@ -69,16 +66,20 @@ The apk file can be copied to the phone and installed directly
 ***************************************************************************************************************************
 
 Information inputted on the Edit page are sent to the sql database on the free online web-host created using AWARDSPACE:
-https://cp1.awardspace.net/beta/start/
 
-Name, category and date are sent to the sql database, while images are stored in the folder on the web-host page.
+	https://cp1.awardspace.net/beta/login/?next=file-manager&notice=login
+
+Login details:
+Client ID: 2896427	
+pw: Awardspace1!
+
+Name, category and date are sent to the sql database, while images are stored in the File Manager folder named "fau5.atwebpages.com" on the web-host page.
 
 SQL DB: https://cp1.awardspace.net/beta/database-manager/#mysql-databases
-Image File Manager: https://cp1.awardspace.net/beta/file-manager/
+File Manager: https://cp1.awardspace.net/beta/file-manager/
 
 Images are stored with the information given about them, so in the web-host folder “Images”, an image would be named as: 
-
-star_Celestial bodies_17_06_2019.jpg 
+	'star_Celestial bodies_17_06_2019.jpg '
 
 Where 
 -	Name: star
@@ -87,20 +88,19 @@ Where
 
 
 ***************************************************************************************************************************
-                                               Problems
+                                               Problems with QT
 ***************************************************************************************************************************
-
-camera_v1:
+1. camera_v1: created using Qt Widgets
 Problem:
 	The camera viewfinder doesn’t show the current display, so if the camera app is opened, the live image isn’t shown
 
-camera_v2
+2. camera_v2: created using QML
 Problem:
 •	App Freezes for android OS less than android 8
 
-Both
+3. Both
 •	For some reason, the captured Image on phone screen rotates automatically after crop is applied
-o	Hack: rotate left and right buttons added for now
+	- Hack: rotate left and right buttons added for now
 •	Adding non-rectangular bounding boxes for the crop
 
 
@@ -122,7 +122,7 @@ Example:
 https://www.youtube.com/watch?v=2Pboq2LFoaI
 
 On QT: 
-#Just include this in .pro
+#Just include this in .pro file
 
 -	For Desktop application
 #.....................................
