@@ -86,7 +86,7 @@ Where
 
 
 ***************************************************************************************************************************
-                                               Problems with QT App
+                                               Bugs with QT App
 ***************************************************************************************************************************
 1. camera_v1: created using Qt Widgets
 Problem:
@@ -94,7 +94,7 @@ Problem:
 
 2. camera_v2: created using QML
 Problem:
-	• App Freezes for android OS less than android 8
+	• App Freezes on some phones with android OS less than android 8
 
 3. Both
 	• For some reason, the captured Image on phone is rotates automatically after crop is applied. This doesn't occur when deployed to Desktop
