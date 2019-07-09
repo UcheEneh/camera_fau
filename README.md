@@ -36,24 +36,23 @@ Openssl is important for sending the image and information to the online web hos
 **************************************************************************************************************************
                                                  APPS 
 **************************************************************************************************************************
-a.	camera_v1: created using Qt Widgets
-b.	camera_v2: created using QML
+1.	camera_v1: created using Qt Widgets
+2.	camera_v2: created using QML
 
-After setting up QT and android deployment on linux, open camera_frontend.pro
--	Build and Run on desktop
--	Deploy on phone:
-	- Method 1: Deploy through debug on the qt creator software
-	- Method 2: Deploy through installing the “android-deploy-debug.apk” file in the build folder
+After setting up QT and android deployment on linux, open the project from the QT creator software (the '.pro' file in each foders)
+-	Build and Run 
+-	Deploying the app:
+	1: On Desktop: Deploys directly after building and running on the qt creator software
+	2: On Phone:
+		(Method 1) After setting up the QT for android and changing the android phone to Developer mode, deploy the project throught the QT creator software with the deploy Kit in Android mode and the phone connected to the computer via USB
+		(Method 2) Deploy through installing the “android-deploy-debug.apk” file in the build folder
 
-Structure:
+Structure of the app:
 •	Take picture
 •	Crop picture
-•	Open edit page for the information about the picture
+•	Open edit page to input information about the picture
 	
-Deploy to Phone
-
-1.	Using QT IDE:
-2.	Using apk: select Release and build the program, then go to the build folder 
+ apk: select Release and build the program, then go to the build folder 
 
 e.g.
 root/build-simplecamera_vMine-Android_for_armeabi_v7a_GCC_4_9_Qt_5_11_2_for_Android_ARMv7-Release/android-build/build/outputs/apk/android-build-debug.apk
@@ -88,20 +87,19 @@ Where
 
 
 ***************************************************************************************************************************
-                                               Problems with QT
+                                               Problems with QT App
 ***************************************************************************************************************************
 1. camera_v1: created using Qt Widgets
 Problem:
-	The camera viewfinder doesn’t show the current display, so if the camera app is opened, the live image isn’t shown
+	The camera viewfinder doesn’t show the current camera feed diplay, so if the camera app is opened, the live image isn’t shown
 
 2. camera_v2: created using QML
 Problem:
-•	App Freezes for android OS less than android 8
+	• App Freezes for android OS less than android 8
 
 3. Both
-•	For some reason, the captured Image on phone screen rotates automatically after crop is applied
-	- Hack: rotate left and right buttons added for now
-•	Adding non-rectangular bounding boxes for the crop
+	• For some reason, the captured Image on phone is rotates automatically after crop is applied. This doesn't occur when deployed to Desktop
+	• Adding non-rectangular bounding boxes for the crop
 
 
 ***************************************************************************************************************************
@@ -131,3 +129,6 @@ LIBS += `pkg-config --libs opencv`
 #.....................................
 
 -	For Android app:
+#.....................................
+include(../../QtProject/shared/opencv_android.pri)
+#.....................................
